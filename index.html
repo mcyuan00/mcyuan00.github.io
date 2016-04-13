@@ -1,88 +1,110 @@
 <html>
 
-
 <head>
-  <title>Chora</title>
-  <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-  <link data-require="bootstrap-css@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-  <link data-require="bootstrap@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-  <link data-require="font-awesome@*" data-semver="4.0.3" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
-  <script data-require="bootstrap@*" data-semver="3.0.2" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-  <script src="index.js"></script>
-  <link rel="stylesheet" href="index.css" />
-
-  <!-- include jQuery library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-
-  <!-- include JustWave Player css and js files -->
-  <link type="text/css" rel="stylesheet" href="justwave/justwave.player.css">
-  <script src="justwave/justwave.player-min.js"></script>
-
+    <title>Chora</title>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+    <link data-require="bootstrap-css@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link data-require="bootstrap@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link data-require="font-awesome@*" data-semver="4.0.3" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <script data-require="bootstrap@*" data-semver="3.0.2" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <!-- include jQuery library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- include JustWave Player css and js files -->
+    <link type="text/css" rel="stylesheet" href="justwave/justwave.player.css">
+    <script src="justwave/justwave.player-min.js"></script>
 </head>
 
 <body>
     <div id="header">
-            <p id = "logo">Chora</p>
+        <p id="logo">Chora</p>
     </div>
-    
-    <div id = "add">
-      <input id="newFormation" type="button" value="Formation"/></li>
-      <input id="newTransition" type="button" value="Transition"/></li>
-  </div>
-
-
+    <div id="add">
+        <input id="newFormation" type="button" value="Formation" />
+        </li>
+        <input id="newTransition" type="button" value="Transition" />
+        </li>
+    </div>
     <div class="sidebar maximized">
-            <div class="tabs-left">
-              <ul class="nav nav-tabs">
+        <div class="tabs-left">
+            <ul class="nav nav-tabs">
                 <li class="active"><a href="#a" data-toggle="tab"><span class="glyphicon glyphicon-th"></span></a></li>
                 <li><a href="#b" data-toggle="tab"><span class="glyphicon glyphicon-transfer"></span></a></li>
                 <li><a href="#c" data-toggle="tab"><span class="glyphicon glyphicon-user"></span></a></li>
-              </ul>
+            </ul>
             <div class="tab-content">
-              <div class="tab-pane active" id="a">
-                <h2>Formations</h2>
-                <table>
-                    <tr>
-                        <td><input class = "formation" type="image" src="images/formation.jpg" /></td>
-                    </tr>
-                    <tr>
-                        <td><input class = "formation" type="image" src="images/formation2.jpg" /></td>
-                    </tr>
-                    <tr>
-                        <td><input class = "formation" type="image" src="images/formation3.jpg" /></td>
-                    </tr>
-                    <tr>
-                        <td><input class = "formation" type="image" src="images/formation4.jpg" /></td>
-                    </tr>
-                    <tr>
-                        <td><input class = "formation" type="image" src="images/formation4.jpg" /></td>
-                    </tr>
-                </table>
-              </div>
-              
-              <div class="tab-pane" id="b">
-                  <h2>Transitions</h2>
-              </div>
-              
-              <div class="tab-pane" id="c">
-                  <h2>Dancers</h2>
-              </div>
-              
-            </div><!-- /tab-content -->
-        </div><!-- /tabbable -->
-      <a href="javascript:onClick();" class="angle icon-double-angle-left"></a>
-    </div> <!--ending sidebar -->
-    
+                <div class="tab-pane active" id="a">
+                    <h2>Formations</h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="formation" type="image" src="images/formation.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="formation" type="image" src="images/formation2.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="formation" type="image" src="images/formation3.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="formation" type="image" src="images/formation4.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="formation" type="image" src="images/formation4.jpg" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="b">
+                    <h2>Transitions</h2>
+                </div>
+                <div class="tab-pane" id="c">
+                    <h2>Dancers</h2>
+                </div>
+            </div>
+            <!-- /tab-content -->
+        </div>
+        <!-- /tabbable -->
+        <a href="javascript:onClick();" class="angle icon-double-angle-left"></a>
+    </div>
+    <!--ending sidebar -->
     <div class="body">
-      <div id="content"></div>
-      <div id="home-player">
-        <audio data-wave_color="#3F87BE" data-prog_color="#10EFAD" width="1100" height="100" data-buttoncolor="#337AB7">
-          <source src="Roses.mp3" type="audio/mpeg">
-        </audio>
+        <div id="content"> <div id = "menu"></div> </div>
+        <!-- <table>
+            <tr>
+                <td>
+                    <div class=".col-md-1" id="previous-slide">
+                        <button class="btn btn-default" id="previous-btn" type="button"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                    </div>
+                </td>
+                <td>
+                    <div id="content">
+                        <div id = "menu"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class=".col-md-1" id="next-slide">
+                        <button class="btn btn-default" id="next-btn" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                    </div>
+                </td>
+            </tr>
+        </table> -->
+        <div id="home-player">
+            <audio data-wave_color="#3F87BE" data-prog_color="#10EFAD" width="1100" height="100" data-buttoncolor="#337AB7">
+                <source src="Roses.mp3" type="audio/mpeg">
+            </audio>
         </div> 
     </div>
-
 </body>
 
 </html>
