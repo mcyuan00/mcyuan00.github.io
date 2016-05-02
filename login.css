@@ -1,0 +1,27 @@
+body{
+  background-color: #fcfcf7;
+}
+
+.container{
+  margin: auto;
+  top: 25%;
+}
+
+#header{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#logo {
+  font-family: 'Amatic SC', cursive;
+  font-size: 70pt;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  color: rgb(122,200,275);
+  padding-left: 35px; padding-top: 8px;
+}
+
+#signin_btn{
+  background-color: #459cb6;
+}

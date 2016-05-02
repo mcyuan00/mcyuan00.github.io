@@ -2,19 +2,16 @@
 
 <head>
     <title>Chora</title>
-    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-    <link data-require="bootstrap-css@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-    <link data-require="bootstrap@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-    <link data-require="font-awesome@*" data-semver="4.0.3" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
-    <script data-require="bootstrap@*" data-semver="3.0.2" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@*" data-semver="3.0.2" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link data-require="bootstrap@*" data-semver="3.0.2" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link data-require="font-awesome@*" data-semver="4.0.3" rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <script data-require="bootstrap@*" data-semver="3.0.2" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css" />
-    <!-- include jQuery library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- include JustWave Player css and js files -->
-    <link type="text/css" rel="stylesheet" href="justwave/justwave.player.css">
-    <script src="justwave/justwave.player-min.js"></script>
+    <!-- waves -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
 </head>
 
 <body>
@@ -22,17 +19,17 @@
         <p id="logo">Chora</p>
     </div>
     <div id="add">
-        <input id="newFormation" type="button" value="Formation" />
+        <input id="newFormation" type="button" value="Add Formation" />
         </li>
-        <input id="newTransition" type="button" value="Transition" />
+        <input id="newTransition" type="button" value="Add Transition" />
         </li>
     </div>
     <div class="sidebar maximized">
         <div class="tabs-left">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#a" data-toggle="tab"><span class="glyphicon glyphicon-th"></span></a></li>
-                <li><a href="#b" data-toggle="tab"><span class="glyphicon glyphicon-transfer"></span></a></li>
-                <li><a href="#c" data-toggle="tab"><span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="#b" data-toggle="tab"><span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="#c" data-toggle="tab"><span class="glyphicon glyphicon-cog"></span></a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="a">
@@ -40,47 +37,99 @@
                     <table>
                         <tr>
                             <td>
-                                <input class="formation" type="image" src="images/formation.jpg" />
+                                <input class="formation" id="formation1" type="image" src="images/formation.jpg" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input class="formation" type="image" src="images/formation2.jpg" />
+                                <input class="formation" id="formation2" type="image" src="images/formation2.jpg" />
+                                <div class="formation" id="formationtwo"></div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input class="formation" type="image" src="images/formation3.jpg" />
+                                <input class="formation" id="formation3" type="image" src="images/formation3.jpg" />
+                                <div class="formation" id="formationthree"></div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input class="formation" type="image" src="images/formation4.jpg" />
+                                <input class="formation" id="formation4" type="image" src="images/formation4.jpg" />
+                                <div class="formation" id="formationfour"></div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input class="formation" type="image" src="images/formation4.jpg" />
+                                <input class="formation" id="formation5" type="image" src="images/formation4.jpg" />
+                                <div class="formation" id="formationfive"></div>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="tab-pane" id="b">
-                    <h2>Transitions</h2>
+                    <h2>Dancers</h2>
+                    
+                    
+                    <button id = "addDancer" button type="button" data-toggle="modal" data-target="#new_dancer_modal" data-backdrop = "true">Add Dancer</button>
+                    <table class="table">
+                        <tbody id = "dancer_table"> 
+                            <tr id = "first">
+                                <td>Jennifer Lopez</td>
+                            </tr>
+                            <tr>
+                                <td>Chris Brown</td>
+                            </tr>
+                            <tr>
+                                <td>Janet Jackson</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
                 <div class="tab-pane" id="c">
-                    <h2>Dancers</h2>
+                    <h2>Settings</h2>
+                    <form>
+                        <fieldset class="form-group">
+                            <label for="danceTitle">Dance Title</label>
+                            <input type="title" class="form-control" id="danceTitle" placeholder="Title" readonly>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="numDancers">Number of Dancers</label>
+                            <select class="form-control" id="numDancers" disabled>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" rows="3" placeholder = "Describe your dance" readonly></textarea>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="music">Music Upload</label>
+                            <input type="file" class="form-control-file" id="music" disabled>
+                            <small id = "currentMusic" class="text-muted">Current: Roses.mp3</small>
+                        </fieldset>
+
+                    </form>
+                    <button id = "editButton">Edit</button>
                 </div>
             </div>
             <!-- /tab-content -->
         </div>
         <!-- /tabbable -->
-        <a href="javascript:onClick();" class="angle icon-double-angle-left"></a>
+        <a id = "sidebar-toggle" class="angle icon-double-angle-left"></a>
     </div>
     <!--ending sidebar -->
     <div class="body">
-        <div id="content"> <div id = "menu"></div> </div>
-        <!-- <table>
+        <!-- <div id="content"> <div id = "menu"></div> </div> -->
+        <table>
             <tr>
                 <td>
                     <div class=".col-md-1" id="previous-slide">
@@ -90,6 +139,8 @@
                 <td>
                     <div id="content">
                         <div id = "menu"></div>
+                        <div id = "trash" width = "50px" height = "50px"><span class = "glyphicon glyphicon-trash"></span></div>
+                        <div id = "colorMenu"></div>
                     </div>
                 </td>
                 <td>
@@ -98,13 +149,53 @@
                     </div>
                 </td>
             </tr>
-        </table> -->
-        <div id="home-player">
-            <audio data-wave_color="#3F87BE" data-prog_color="#10EFAD" width="1100" height="100" data-buttoncolor="#337AB7">
-                <source src="Roses.mp3" type="audio/mpeg">
-            </audio>
-        </div> 
+        </table>
+
+        <div id = "playbutton">
+            <button id="play" class="btn btn-primary">
+                <i class="glyphicon glyphicon-play"></i>
+                Play
+              </button>
+        </div>
+        <div id="waveform"></div> 
     </div>
+
+
+       <div class = "container">
+    <!-- Modal -->
+    <div id="new_dancer_modal" class="modal fade" role="dialog">
+      <div class="modal-dialog ">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add Dancer</h4>
+          </div>
+          <div class="modal-body">
+            <div class = "row">
+              <div class = "form col-md-11">
+                <form id = "form_part1" name = "form_part1">
+                  <fieldset class="form-group">
+                    <label for="dancerName">Dancer Name</label>
+                    <input type="text" class="form-control" id="dancer_name" name ="dancer_name" placeholder="First, Last" required>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="dancerInfo">Dancer Info</label>
+                    <textarea class="form-control" id="dancerInfo" name= "dancerInfo" row = 3 required></textarea>
+                  </fieldset>
+                  <button type="submit" class="btn btn-primary" id = "submit_button">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+   </div> 
 </body>
 
 </html>

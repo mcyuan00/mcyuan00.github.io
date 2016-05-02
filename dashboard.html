@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- <script src="login.js"></script> -->
+    <script language="JavaScript" type="text/javascript" src="dashboard.js"></script>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class = "row">
+      <p id = "project_header" class="col-md-3">Projects</p>
+    </div>
+
+    <div id="wrapper">
+      <div id="columns" class="sortable">
+        <div class="pin ui-state-default">
+          <button type="button" id = "new_project_button" class="project_button" data-toggle="modal" data-target="#new_project_modal" data-backdrop = "true"></button>
+          <p>
+            New Project
+          </p>
+        </div>
+      
+        <div class="pin ui-state-default" id = "first">
+          <button type="button" id = "waveform_button" class="project_button" ></button>
+          <p>
+            Project 1: <br>
+            Ridonkulous Footwork Show 2016 <br>
+            Music: "The Hills"
+          </p>
+        </div>
+      
+        <div class="pin ui-state-default">
+          <button type="button" id = "waveform2_button" class="project_button" ></button>
+          <p>
+            Project 2
+          </p>
+        </div>
+      
+        <div class="pin ui-state-default">
+          <button type="button" id = "waveform_button" class="project_button" ></button>
+          <p>
+            Project 3
+          </p>
+        </div>
+        <div class="pin ui-state-default">
+          <button type="button" id = "ballet1" class="project_button" ></button>
+          <p>
+            Cute ballet costume! <br>
+            For swan lake show?
+          </p>
+        </div>
+        <div class="pin ui-state-default">
+          <button type="button" id = "ballet2" class="project_button" ></button>
+          <p>
+            Ballet
+          </p>
+        </div>
+        <div class="pin ui-state-default">
+          <button type="button" id = "ballet3" class="project_button" ></button>
+          <p>
+            Ballet
+          </p>
+        </div>
+        <div class="pin ui-state-default">
+          <button type="button" id = "two_dancers" class="project_button" ></button>
+          <p>
+            Dance Inspo
+          </p>
+        </div>
+        <div class="pin ui-state-default">
+          <button type="button" id = "group_dance" class="project_button" ></button>
+          <p>
+            Inspo
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+   <div class = "container">
+    <!-- Modal -->
+    <div id="new_project_modal" class="modal fade" role="dialog">
+      <div class="modal-dialog ">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">New Project</h4>
+          </div>
+          <div class="modal-body">
+            <div class = "row">
+              <div class = "form col-md-11">
+                <form id = "form_part1" name = "form_part1">
+                  <fieldset class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input type="text" class="form-control" id="projectTitle" name ="projectTitle" placeholder="Enter project title" required>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="numDancers">Number of Dancers</label>
+                    <input type="number" class="form-control" id="numDancers" name= "numDancers" required>
+                  </fieldset>
+                  <fieldset class="form-group" id= "audiofield">
+                    <label for="music">Music</label>
+                    <input type="file" class="form-control-file" id="music" name = "music">
+                    <small class="text-muted">MP3 files preferred!</small>
+                  </fieldset>
+                  <button type="submit" class="btn btn-primary" id = "submit_button">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+   </div> 
+  </body>
+</html>
